@@ -27,7 +27,12 @@ describe('calculator', function () {
     assert.equal(actual, expected);
   })
 
-
+  it('it multiplies a number with the previous total', function() {
+    calculator.previousTotal = 3;
+    calculator.multiply(5);
+    let actual = 15;
+    let expected = calculator.runningTotal;
+    assert.equal(actual, expected);
   })
 
 });
