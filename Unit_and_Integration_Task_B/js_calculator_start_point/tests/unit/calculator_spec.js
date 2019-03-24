@@ -16,7 +16,18 @@ describe('calculator', function () {
     calculator.add(4);
     let actual = 5;
     let expected = calculator.runningTotal;
-    assert.equal(actual, expected)
+    assert.equal(actual, expected);
+  })
+
+  it('it subtracts a number from the previous total', function() {
+    calculator.previousTotal = 7;
+    calculator.subtract(4);
+    let actual = 3;
+    let expected = calculator.runningTotal;
+    assert.equal(actual, expected);
+  })
+
+
   })
 
 });
