@@ -35,4 +35,11 @@ describe('calculator', function () {
     assert.equal(actual, expected);
   })
 
+  it('it divides the previous total with a number', function() {
+    calculator.previousTotal = 21;
+    calculator.divide(7);
+    let actual = 3;
+    let expected = calculator.runningTotal;
+    assert.equal(actual, expected);
+  })
 });
