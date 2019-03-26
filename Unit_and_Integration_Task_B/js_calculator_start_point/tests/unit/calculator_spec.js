@@ -10,7 +10,7 @@ describe('calculator', function () {
   it('it has a sample test', function(){
     assert.equal(true, true)
   })
-
+//unit tests
   it('it sums a number to the previous total', function(){
     calculator.previousTotal = 1;
     calculator.add(4);
@@ -41,5 +41,12 @@ describe('calculator', function () {
     let actual = 3;
     let expected = calculator.runningTotal;
     assert.equal(actual, expected);
+  })
+// integration tests
+  it('should concatenate multiple number button clicks', function() {
+    calculator.numberClick(1);
+    calculator.numberClick(1);
+    let actual = 11;
+    assert.equal(actual, calculator.runningTotal)
   })
 });
