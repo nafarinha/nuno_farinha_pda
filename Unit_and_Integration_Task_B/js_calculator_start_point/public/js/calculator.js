@@ -72,7 +72,7 @@ Calculator.prototype = {
     // this.previousTotal = this.runningTotal;
     // this.newTotal = true;
 
-    // TEST
+    //isfinite in if statement will deal with division by zero.
         if(!isFinite(this.runningTotal)) {
           this.runningTotal = 'Not a number';
           this.previousTotal = this.runningTotal;
