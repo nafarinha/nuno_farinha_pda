@@ -65,7 +65,7 @@ describe('calculator functionality', function() {
     element(by.css('#number0')).click();
     element(by.css('#operator_multiply')).click();
     element(by.css('#number1')).click();
-    [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20].forEach(function(i) {
+    Array.from({ length: 20 }).forEach((x, i) => {
       element(by.css('#number0')).click();
     });
     element(by.css('#operator_equals')).click();
