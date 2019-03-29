@@ -11,7 +11,7 @@ describe('calculator', function () {
     assert.equal(true, true)
   })
 //unit tests
-  it('it sums a number to the previous total', function(){
+  it('should sum a number to the previous total', function(){
     calculator.previousTotal = 1;
     calculator.add(4);
     let actual = 5;
@@ -19,7 +19,7 @@ describe('calculator', function () {
     assert.equal(actual, expected);
   })
 
-  it('it subtracts a number from the previous total', function() {
+  it('should subtract a number from the previous total', function() {
     calculator.previousTotal = 7;
     calculator.subtract(4);
     let actual = 3;
@@ -27,7 +27,7 @@ describe('calculator', function () {
     assert.equal(actual, expected);
   })
 
-  it('it multiplies a number with the previous total', function() {
+  it('should multiply a number with the previous total', function() {
     calculator.previousTotal = 3;
     calculator.multiply(5);
     let actual = 15;
@@ -35,7 +35,7 @@ describe('calculator', function () {
     assert.equal(actual, expected);
   })
 
-  it('it divides the previous total with a number', function() {
+  it('should divide the previous total with a number', function() {
     calculator.previousTotal = 21;
     calculator.divide(7);
     let actual = 3;
@@ -48,5 +48,13 @@ describe('calculator', function () {
     calculator.numberClick(1);
     let actual = 11;
     assert.equal(actual, calculator.runningTotal)
+  })
+
+  it('should chain multiple operations together', function() {
+    calculator.numberClick(2);
+    calculator.operatorClick();
+    calculator.operatorClick();
+    let actual = 4;
+    assert.equal(actual, calculator.runningTotal);
   })
 });
