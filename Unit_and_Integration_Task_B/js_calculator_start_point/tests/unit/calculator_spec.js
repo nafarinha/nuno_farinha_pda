@@ -58,10 +58,14 @@ describe('calculator', function () {
     assert.equal(actual, calculator.runningTotal);
   })
 
-  // it('should clear the running total without affecting the calculation', function() {
-  //   calculator.numberClick(1);
-  //   calculator.add(1);
-  //   calculator.clearClick();
-  //   assert.equal(2, calculator.runningTotal);
-  // })
+  it('should clear the running total without affecting the calculation', function() {
+    calculator.numberClick(2);
+    calculator.operatorClick('+');
+    calculator.numberClick(2);
+    calculator.operatorClick('+');
+    calculator.numberClick(6);
+    calculator.clearClick();
+    assert.equal(4, calculator.previousTotal);
+    assert.equal(0, calculator.runningTotal);
+  })
 });
