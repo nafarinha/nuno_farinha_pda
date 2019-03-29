@@ -52,9 +52,16 @@ describe('calculator', function () {
 
   it('should chain multiple operations together', function() {
     calculator.numberClick(2);
-    calculator.operatorClick();
-    calculator.operatorClick();
+    calculator.operatorClick('+');
+    calculator.operatorClick('+');
     let actual = 4;
     assert.equal(actual, calculator.runningTotal);
   })
+
+  // it('should clear the running total without affecting the calculation', function() {
+  //   calculator.numberClick(1);
+  //   calculator.add(1);
+  //   calculator.clearClick();
+  //   assert.equal(2, calculator.runningTotal);
+  // })
 });
