@@ -69,8 +69,19 @@ Calculator.prototype = {
     // replace the previous total with the current running total and flag that a
     // new total has been calculated
 
-    this.previousTotal = this.runningTotal;
-    this.newTotal = true;
+    // this.previousTotal = this.runningTotal;
+    // this.newTotal = true;
+
+    // TEST
+        if(!isFinite(this.runningTotal)) {
+          this.runningTotal = 'Not a number';
+          this.previousTotal = this.runningTotal;
+          this.newTotal = true;
+        } else {
+          this.previousTotal = this.runningTotal;
+          this.newTotal = true;
+        }
+
   },
 
   clearClick: function() {
