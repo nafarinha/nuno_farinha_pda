@@ -27,7 +27,8 @@ class CardGame
   dif highest_card(card1 card2)
   #By convention, the if statement should be indented in relation to the previous line where the method is defined.
   if card1.value > card2.value
-    #Property 'name' does not exist in card object. It should be replaced with 'suit'.
+    #Property 'name' does not exist in card object.
+    # Object card1 should be returned.
     return card.name
   else
     card2
