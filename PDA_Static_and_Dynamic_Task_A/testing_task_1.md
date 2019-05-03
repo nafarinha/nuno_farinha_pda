@@ -13,7 +13,6 @@ class CardGame
 
 
   # In Ruby, by convention method names adhere to the snake_case convention, not camelCase.
-  # This should be a class method, by using the self keyword (self.check_for_ace)
   def checkforAce(card)
     # The '=' character is an assignment operator. To evaluate if the card.value is true (i.e equal to 1) or false (i.e not equal to 1), a comparison operator must be used instead, that being '==' for Ruby.
     if card.value = 1
@@ -25,7 +24,6 @@ class CardGame
 
   # 'dif' is a typo. To define a method the correct keyword is 'def'.
   # The two parameters must be separated by a comma (card1, card2).
-  # The method 'highest_card' should be a class method (self.highest_card).
   dif highest_card(card1 card2)
   #By convention, the if statement should be indented in relation to the previous line where the method is defined.
   if card1.value > card2.value
@@ -41,6 +39,7 @@ end
 
 def self.cards_total(cards)
   # The variable 'total' should be initialised with the number 0 (zero).
+  # This should be an instance method, not a class method (remove the self keyword)
   total
   for card in cards
     total += card.value
