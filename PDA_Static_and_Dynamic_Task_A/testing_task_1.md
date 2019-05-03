@@ -24,10 +24,10 @@ class CardGame
   end
 
   # 'dif' is a typo. To define a method the correct keyword is 'def'.
-  # The two parameters must be seperated by a comma (card1, card2).
+  # The two parameters must be separated by a comma (card1, card2).
   # The method 'highest_card' should be a class method (self.highest_card).
   dif highest_card(card1 card2)
-  #By convention, the if statement should be indentented in relation to the previous line where the method is defined.
+  #By convention, the if statement should be indented in relation to the previous line where the method is defined.
   if card1.value > card2.value
     #Property 'name' does not exist in card object. It should be replaced with 'suit'.
     return card.name
@@ -36,11 +36,11 @@ class CardGame
   end
 end
 
-# This 'end' keyword should be removed
+# This 'end' keyword should be removed.
 end
 
 def self.cards_total(cards)
-  # The variable 'total' should be initialized with the number 0 (zero).
+  # The variable 'total' should be initialised with the number 0 (zero).
   total
   for card in cards
     total += card.value
